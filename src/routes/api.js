@@ -11,4 +11,5 @@ const limit = rateLimit({
   message: "Too many requests, please try again after an 1 minute",
 });
 router.post("/v1/auth/login", limit, controllerAuthentication.login);
+router.get("/v1/auth/r2", limit, controllerAuthentication.getR2);
 module.exports = router;
