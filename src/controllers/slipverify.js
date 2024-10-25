@@ -32,6 +32,8 @@ module.exports.slipVerify = async (req, res) => {
     if(!isEmpty(req.body['events'])){
         if (req.body.events[0].type === "message") {
 
+
+            console.log(req.body.events[0].message)
             console.log(req.body.events[0].source)
             // You must stringify reply token and message data to send to the API server
             const dataString = JSON.stringify({
