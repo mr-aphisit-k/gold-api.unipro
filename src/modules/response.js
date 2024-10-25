@@ -105,16 +105,16 @@ class StatusError {
                 message: "รหัส PIN ของคุณไม่ถูกต้อง",
             },
             30001: {
-                type: "Error - Insert/Update Data Error",
+                type: "Error - Parameter Invalid",
                 message: "ไม่สามารถทำรายการได้ เนื่องจากข้อมูลไม่ครบถ้วน",
             },
             30002: {
-                type: "Error - Insert/Update Data Limit",
-                message: "ไม่สามารถทำรายการได้ เนื่องจากมีจำนวนรายการถึงขีดจำกัดแล้ว",
+                type: "Error - Parameter Date Invalid",
+                message: "ไม่สามารถทำรายการได้ เนื่องจากวันที่ไม่ถูกต้อง",
             },
             30003: {
-                type: "Error - Upload File",
-                message: "ไม่สามารถอัพโหลดไฟล์ได้",
+                type: "Error - Insert/Update Data Limit",
+                message: "ไม่สามารถทำรายการได้ เนื่องจากมีจำนวนรายการถึงขีดจำกัดแล้ว",
             },
             30004: {
                 type: "Error - Insufficient Balance",

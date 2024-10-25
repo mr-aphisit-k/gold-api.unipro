@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const helmet = require("helmet")
 const uuid = require("uuid")
 // Routes
-const apiRoutes = require("./src/routes/api")
+const apiRoutes = require("./src/routes/index")
 const dayjs = require("dayjs")
 
 app.use(
@@ -39,7 +39,7 @@ app.use((req, res, next) => {
    
     res.send = function (data) {
         console.log(`Intercepted reponse: ${req.method} ${req.url}`)
-        console.log(arguments[0])
+        // console.log(arguments[0])
         res.setHeader("X-Response-At", dayjs().valueOf())
 
 
@@ -50,7 +50,7 @@ app.use((req, res, next) => {
 
 app.use("/api", apiRoutes)
 app.get("/", (req, res) => {
-    res.send("API running")
+    res.sendStatus(200)
 })
 
 app.listen(port, () => {
