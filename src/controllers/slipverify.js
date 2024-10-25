@@ -6,7 +6,7 @@ const Helper = require("../modules/helper")
 const dayjs = require("dayjs")
 const TOKEN = process.env.TOKEN_LINE
 module.exports.slipVerify = async (req, res) => {
-    res.send("HTTP POST request sent to the webhook URL!")
+    
     // If the user sends a message to your bot, send a reply message
 
     if(!isEmpty(req.body['events'])){
@@ -66,5 +66,7 @@ module.exports.slipVerify = async (req, res) => {
             request.end()
         }
     }
+
+    res.status(200).send(req.body['events'])
   
 }
