@@ -4,6 +4,7 @@ const LoggingStep = require("../modules/logging")
 const RestResponse = require("../modules/response")
 const Helper = require("../modules/helper")
 const dayjs = require("dayjs")
+const https = require('https');
 const TOKEN = process.env.TOKEN_LINE
 module.exports.slipVerify = async (req, res) => {
     
